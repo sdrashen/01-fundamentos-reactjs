@@ -2,7 +2,8 @@ import { Avatar } from './Avatar'
 import { Comment } from './Comment'
 import styles from './Post.module.css'
 
-export function Post() {
+export function Post(props) {
+  
   return (
      <article className={styles.post}>
       <header>
@@ -17,17 +18,7 @@ export function Post() {
         <time dataTime="2023-07-21 15:00:00">Publicado há 1h</time>
       </header>
 
-      <div className={styles.content}>
-        <p>Fala, gente boa e bonita!</p>
-
-        <p>Acabei de subir mais um projeto no meu portifolio.</p>
-        <p>👉{' '}<a href="">link aqui futuramente</a></p>
-        <p>
-          <a href="">#novoprojeto</a>{' '}
-          <a href="">#frontend</a>{' '}
-          <a href="">#desenvolvimento</a>
-        </p>
-      </div>
+      <div className={styles.content}></div>
 
       <form className={styles.commentForm}>
         <strong>
