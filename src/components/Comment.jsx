@@ -4,10 +4,9 @@ import { Avatar } from './Avatar'
 
 export function Comment({ content, onDeleteComment }) {
 
-  function handleDeleteComment () {
-    console.log('DELETAAAA')
-
+  function handleDeleteComment() {
     onDeleteComment(content);
+    /**A prop aqui virou a própria função */
   }
 
   return (
