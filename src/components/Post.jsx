@@ -36,13 +36,10 @@ export function Post({author, publishedAt, content}) {
     setNewCommentText(event.target.value);
   }
 
-  function deleteComment(commentDeleted) /**Essa function recebe por parm o comentário a ser removido*/ {
-    /**E vai fazer alguma coisa com ele: 
-     * Criar uma lista de comentários sem aquele que foi deletado.
-     * Aqui vamos criar uma lista a partir de uma lista já existente, porém removendo um item.
-    */
-    const commentsWithoutTheDeletedOne = commentDeleted.filter(commentsList => {
-      return commentsList !== commentDeleted
+  function deleteComment(commentToDelete) {
+   
+    const commentsWithoutTheDeletedOne = comments.filter(comment => {
+      return comment !== commentToDelete
     })
     setComments(commentsWithoutTheDeletedOne)
   }
