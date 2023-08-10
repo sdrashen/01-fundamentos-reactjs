@@ -13,8 +13,13 @@ export function Comment({ content, onDeleteComment }) {
   }
 
   function handleLikeComment() {
-    setLikeCount(likeCount + 1);
+    setLikeCount((likeCountMostRecentValue) => { /**Aqui foi chamado assim mas pode ser o nome que vc quiser */
+      return likeCountMostRecentValue +1
+    });
   }
+  /*Essa função aumenta o número de likes de dois em dois.
+  *ela foi criada mais para explicar closures
+  */
 
   return (
     <div className={styles.comment}>
